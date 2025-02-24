@@ -34,7 +34,7 @@ LD[unexport] = "1"
 
 # Baremetal, just need a compiler
 INHIBIT_DEFAULT_DEPS = "1"
-DEPENDS = "virtual/cross-cc"
+DEPENDS = "virtual/${HOST_PREFIX}gcc"
 
 # Bring in clang compiler if using clang as default
 DEPENDS:append:toolchain-clang = " clang-cross-${TARGET_ARCH}"
